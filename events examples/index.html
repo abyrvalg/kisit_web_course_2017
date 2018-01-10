@@ -1,0 +1,22 @@
+<div class="container">
+	<ul id='list'>
+		<li class="item"> I'm item 1</li>
+		<li><a id="myLink" href="http://google.com">link to google</a></li>
+	</ul>
+</div>
+
+<script>
+	
+	list.addEventListener('click', (function(){
+		var count = 1; 
+		return function(e){
+			if(e.target.classList.contains('item')) {
+				e.currentTarget.innerHTML += "<li class='item'>I'm item "+(++count)+"</li>"
+			}
+			else {
+				e.preventDefault();
+				alert('the link has been clicked');
+			}
+		} 
+	})())
+</script>
