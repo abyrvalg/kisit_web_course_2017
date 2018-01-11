@@ -1,0 +1,36 @@
+<head>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="script.js"></script>
+	
+
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+	<div class="view">
+		<div data-position="0" class="slide active">
+			<h2>Head 1</h2>
+			<div>body 1</div>
+		</div>
+		<div data-position="1" class="slide">
+			<h2>Head 2</h2>
+			<div>body 2</div>
+		</div>
+		<div data-position="2" class="slide">
+			<h2>Head 3</h2>
+			<div>body 3</div>
+		</div>
+	</div>
+	<div class="addSlides">
+		<input class="addHead"/>
+		<textarea class="addBody"></textarea>
+		<button class="addSlide">Add new slide</button>
+	</div>
+</body>
+
+<script id="slide_template" type="text/template">
+	<div data-position="{{pos}}" class="slide">
+		<h2>{{head}}</h2>
+		<div>{{body}}</div>
+	</div>
+</script>
