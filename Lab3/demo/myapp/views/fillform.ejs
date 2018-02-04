@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>fill form</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= form.name %></h1>
+	<form action="/sendForm" method="POST">
+		<% for(var i = 0; i < form.fields.length; i++) { %>
+			<div>
+			<%= form.fields[i].id %>
+				<input name='<%= form.fields[i].id %>'/>
+			</div>
+		<% } %>
+		<input type="hidden" name="formID" value="<%= form.id%>">
+		<input type="submit" value="submit">
+	</form>
+  </body>
+</html>
